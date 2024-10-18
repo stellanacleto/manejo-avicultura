@@ -1,7 +1,10 @@
-function App() {
-  return (
-    <h1>Hello World</h1>
-  );
-}
+import { AuthGoogleProvider } from "./contexts/authGoogle";
+import { AppRoutes } from "./routes/routes";
 
-export default App;
+export const App = () => {
+  return (
+  <AuthGoogleProvider>
+    <AppRoutes />
+  </AuthGoogleProvider>
+  );
+};
